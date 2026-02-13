@@ -2,6 +2,9 @@
 
 A secure, real-time bookmark management application built with Next.js and Supabase. Save your favorite links and watch them sync across all your devices instantly without a page refresh.
 
+## 🚀 Live Demo
+**URL:** https://smart-bookmark-manager-alpha.vercel.app/
+
 ## 🛠 Tech Stack
 - **Framework:** Next.js 14 (App Router)
 - **Database & Auth:** Supabase (PostgreSQL + Google OAuth)
@@ -34,6 +37,3 @@ A secure, real-time bookmark management application built with Next.js and Supab
 **Problem:** Requirement #3 demanded that User A cannot see User B's bookmarks.
 
 **Solution:** Instead of relying solely on client-side filtering (which can be bypassed), I enforced privacy at the database layer using **Postgres RLS Policies**. I used the expression `auth.uid() = user_id`, which strictly limits database engine access to the owner of the record, regardless of the API call.
-
-## 🚀 Live Demo
-**URL:** 
